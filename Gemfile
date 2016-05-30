@@ -45,6 +45,11 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.4'
+  gem 'shoulda-matchers'
+end
+
 gem 'angularjs-rails'
 gem 'flickr-objects'
 

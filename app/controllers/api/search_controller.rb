@@ -1,7 +1,11 @@
 class Api::SearchController < ApplicationController
   def search
-    @photos = Flickr.photos.search(text: params[:search_text])
+    begin
+      @photos = Flickr.photos.search(text: params[:search_text])
 
-    render json: @photos
+      render json: @photos
+    rescue => e
+      render json: {error: e}
+    end
   end
 end
