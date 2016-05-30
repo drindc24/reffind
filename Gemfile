@@ -46,4 +46,5 @@ group :development do
 end
 
 gem 'angularjs-rails'
+gem 'flickr-objects'
 
