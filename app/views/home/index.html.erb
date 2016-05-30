@@ -1,7 +1,14 @@
-<h1>Search Flickr</h1>
+<div ng-controller="SearchCtrl">
+  <h1>Search Flickr</h1>
 
-<form>
-  <input type="text" ng-model="newEntry.name">
-</form>
+  <form ng-submit="submit()">
+    Enter text and hit enter:
+    <input type="text" ng-model="searchText" name="text" />
+    <input type="submit" id="submit" value="Submit" />
+  </form>
 
-{{newEntry.name}}
+  <div ng-show="results.length > 0" ng-repeat="result in results">
+    <img src="http://{{result.url}}">
+  </div>
+</div>
+
