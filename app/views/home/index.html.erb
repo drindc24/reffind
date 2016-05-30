@@ -8,7 +8,7 @@
   </form>
 
   <div ng-show="results.length > 0" ng-repeat="result in results">
-    <img src="http://{{result.url}}">
+    <a href="{{result.url}}"><img src={{result.static_url}}" width="100" length="100"></a>
   </div>
 </div>
 
